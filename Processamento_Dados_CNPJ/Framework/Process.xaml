@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>848.8,4227.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>848.8,2378.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -133,7 +133,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="766.4,4162.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="686.4,2313.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:TimeSpan" Name="tempoMaximoDownload" />
     </Sequence.Variables>
@@ -143,8 +143,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="704,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="704,113.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="624,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="624,113.6" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="x:TimeSpan">[tempoMaximoDownload]</OutArgument>
       </Assign.To>
@@ -152,19 +152,19 @@
         <InArgument x:TypeArguments="x:TimeSpan">[TimeSpan.ParseExact(in_Config("TempoMaximoDownload").ToString, "hh\:mm\:ss", Globalization.CultureInfo.InvariantCulture)]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Portal de Dados Abertos" sap:VirtualizedContainerService.HintSize="704,3709.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[GlobalVariablesNamespace.GlobalVariables.UiBrowser]" InteractionMode="Simulate" IsIncognito="True" OpenMode="Never" OutUiElement="[GlobalVariablesNamespace.GlobalVariables.UiBrowser]" ScopeGuid="0e0d5a49-1750-46ea-884f-7903bfe1d27b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Portal de Dados Abertos" sap:VirtualizedContainerService.HintSize="624,1860.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[GlobalVariablesNamespace.GlobalVariables.UiBrowser]" InteractionMode="Simulate" IsIncognito="True" OpenMode="Never" OutUiElement="[GlobalVariablesNamespace.GlobalVariables.UiBrowser]" ScopeGuid="0e0d5a49-1750-46ea-884f-7903bfe1d27b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="670.4,3549.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="590.4,1700.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Expandir Recursos'" sap:VirtualizedContainerService.HintSize="608,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e0d5a49-1750-46ea-884f-7903bfe1d27b" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Expandir Recursos'" sap:VirtualizedContainerService.HintSize="528,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e0d5a49-1750-46ea-884f-7903bfe1d27b" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica---cnpj" DesignTimeRectangle="692, 518, 1176, 99" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Recursos*' id='btnCollapse' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Recursos*' id='btnCollapse' tag='BUTTON' type='button' class='btn btn-light btn-block m-1 dataset-btn botao-collapse-Recursos collapsed' check:text='Recursos5' /&gt;" Guid="d8f17cd9-7d86-4823-a9bf-f1e15638261c" ImageBase64="" InformativeScreenshot="fe1f6b6b5a3bd69f46e2270c378ed23f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal de Dados Abertos' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -179,7 +179,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <Sequence sap2010:Annotation.AnnotationText="Download PDF Dicionário de Dados do CNPJ" sap:VirtualizedContainerService.HintSize="608,88" sap2010:WorkflowViewState.IdRef="Sequence_24">
+            <Sequence sap2010:Annotation.AnnotationText="Download PDF Dicionário de Dados do CNPJ" sap:VirtualizedContainerService.HintSize="528,88" sap2010:WorkflowViewState.IdRef="Sequence_24">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -301,11 +301,9 @@
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NApplicationCard>
             </Sequence>
-            <Sequence sap2010:Annotation.AnnotationText="Download Dados aberto CNPJ" sap:VirtualizedContainerService.HintSize="608,2418.4" sap2010:WorkflowViewState.IdRef="Sequence_30">
+            <Sequence sap2010:Annotation.AnnotationText="Download Dados aberto CNPJ" sap:VirtualizedContainerService.HintSize="528,981.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="anoMesAtual" />
-                <Variable x:TypeArguments="x:Boolean" Name="isAguardar" />
-                <Variable x:TypeArguments="ui:Timer" Name="aguardaDownloadTime" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -314,7 +312,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="545.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign sap:VirtualizedContainerService.HintSize="465.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_5">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[anoMesAtual]</OutArgument>
                 </Assign.To>
@@ -322,7 +320,7 @@
                   <InArgument x:TypeArguments="x:String">[DateTime.Today.ToString("yyyy-MM")]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ParallelForEach x:TypeArguments="x:String" DisplayName="Parallel For Each" sap:VirtualizedContainerService.HintSize="545.6,720.8" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_2" Values="[in_Config(&quot;ArquivosBaixar&quot;).ToString.Split(&quot;,&quot;c)]">
+              <ParallelForEach x:TypeArguments="x:String" DisplayName="Parallel For Each" sap:VirtualizedContainerService.HintSize="465.6,713.6" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_2" Values="[in_Config(&quot;ArquivosBaixar&quot;).ToString.Split(&quot;,&quot;c)]">
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="currentDoc" />
@@ -355,111 +353,8 @@
                   </Sequence>
                 </ActivityAction>
               </ParallelForEach>
-              <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="545.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_5" />
-              <ui:StartTimer DisplayName="Start Timer" sap:VirtualizedContainerService.HintSize="545.6,112.8" sap2010:WorkflowViewState.IdRef="StartTimer_3" Timer="[aguardaDownloadTime]" />
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="545.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Aguradando finalização de documentos download...&quot;]" />
-              <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Aguardar finalização dos últimos downloads" Condition="[isAguardar And aguardaDownloadTime.Elapsed &lt; tempoMaximoDownload]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="545.6,692.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
-                <ui:InterruptibleDoWhile.Body>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,515.2" sap2010:WorkflowViewState.IdRef="Sequence_45">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Boolean">[isAguardar]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.crdownload" Folder="[in_Config(&quot;LocalSalvarArquivo&quot;).ToString]" sap:VirtualizedContainerService.HintSize="449.6,312.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_5" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
-                      <ui:ForEachFileX.Body>
-                        <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
-                          <ActivityAction.Argument1>
-                            <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
-                          </ActivityAction.Argument1>
-                          <ActivityAction.Argument2>
-                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                          </ActivityAction.Argument2>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_44">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_9">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Boolean">[isAguardar]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <If Condition="[isAguardar]" sap:VirtualizedContainerService.HintSize="449.6,445.6" sap2010:WorkflowViewState.IdRef="If_7">
-                              <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,259.2" sap2010:WorkflowViewState.IdRef="Sequence_42">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="353.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_6" />
-                                  <ui:Break sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="Break_3" />
-                                </Sequence>
-                              </If.Then>
-                              <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_43">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </If.Else>
-                            </If>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:ForEachFileX.Body>
-                    </ui:ForEachFileX>
-                  </Sequence>
-                </ui:InterruptibleDoWhile.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:InterruptibleDoWhile>
-              <ui:StopTimer DisplayName="Stop Timer" sap:VirtualizedContainerService.HintSize="545.6,112.8" sap2010:WorkflowViewState.IdRef="StopTimer_3" Timer="[aguardaDownloadTime]" />
-              <If Condition="[isAguardar]" sap:VirtualizedContainerService.HintSize="545.6,212.8" sap2010:WorkflowViewState.IdRef="If_6">
-                <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Throw Exception="[New Exception(&quot;Tempo limite para aguarda download passados &quot;+aguardaDownloadTime.Elapsed.ToString)]" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_4" />
-                  </Sequence>
-                </If.Then>
-                <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_47">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                </If.Else>
-              </If>
             </Sequence>
-            <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.zip" Folder="[in_Config(&quot;LocalSalvarArquivo&quot;).ToString]" sap:VirtualizedContainerService.HintSize="608,727.2" sap2010:WorkflowViewState.IdRef="ForEachFileX_3" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+            <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.zip" Folder="[in_Config(&quot;LocalSalvarArquivo&quot;).ToString]" sap:VirtualizedContainerService.HintSize="528,315.2" sap2010:WorkflowViewState.IdRef="ForEachFileX_3" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
               <ui:ForEachFileX.Body>
                 <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                   <ActivityAction.Argument1>
@@ -468,14 +363,16 @@
                   <ActivityAction.Argument2>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument2>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,436.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Extraindo arquivo do ZIP: &quot; + CurrentFile.Name]" />
                     <uascw:ExtractFiles Content="{x:Null}" DestinationFolderInfo="{x:Null}" File="{x:Null}" Password="{x:Null}" CodePage="Default" ConflictResolution="Replace" DestinationFolder="[CurrentFile.Directory.ToString]" DisplayName="Extract/Unzip Files" ExtractToADedicatedFolder="False" FileToExtract="[CurrentFile.FullName]" sap:VirtualizedContainerService.HintSize="353.6,240.8" sap2010:WorkflowViewState.IdRef="ExtractFiles_1" SkipUnsupportedFiles="False" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Deletando ZIP: &quot; + CurrentFile.Name]" />
                     <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="353.6,105.6" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[CurrentFile.FullName]" />
                   </Sequence>
                 </ActivityAction>
